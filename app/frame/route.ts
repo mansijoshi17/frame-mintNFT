@@ -37,11 +37,10 @@ export async function POST(req: NextRequest, res: NextResponse) {
       const frameMetadata = await fdk.getFrameMetadata({
         post_url: `${process.env.BASE_URL}/redirect`,
         buttons: [
-          { label: "Blog Tutorial", action: "post_redirect" },
-          { label: "Video Tutorial", action: "post_redirect" },
+          { label: "Learn how to make this", action: "post_redirect" },
         ],
         aspect_ratio: "1:1",
-        cid: "QmVe3MAWXhH1z27sn8SvSp8vUtC1staQMPP3xBzibv3vZA",
+        cid: "QmQQYh6beZLHhNucXKRCJM8EVWgDQCBdaEHyqcWSLemGtm",
       });
       if (isValid) {
         await fdk.sendAnalytics("frame-mint-tutorial-mint", body);
@@ -56,11 +55,10 @@ export async function POST(req: NextRequest, res: NextResponse) {
     const frameMetadata = await fdk.getFrameMetadata({
       post_url: `${process.env.BASE_URL}/redirect`,
       buttons: [
-        { label: "Blog Tutorial", action: "post_redirect" },
-        { label: "Video Tutorial", action: "post_redirect" },
+        { label: "Learn how to make this!", action: "post_redirect" },
       ],
       aspect_ratio: "1:1",
-      cid: "QmVe3MAWXhH1z27sn8SvSp8vUtC1staQMPP3xBzibv3vZA",
+      cid: "QmYTXErszk9Mgwn51dgYYxLo1qhfXe3v2y8DNWFcwkBjc7",
     });
     if (isValid) {
       await fdk.sendAnalytics("frame-mint-tutorial-mint", body);
